@@ -76,4 +76,14 @@ public class MovieController {
 		return m.get();
 	}
 	
+	@GetMapping("/find-by-rating")
+	public List<Movie> getAllRating(String rating) {
+		return movieRepo.findByRating(rating);
+	}
+	
+	@GetMapping("/find-by-director")
+	public List<Movie> getAllDirector(String director) {
+		return movieRepo.findByDirector(director);
+	}
+	
 }
